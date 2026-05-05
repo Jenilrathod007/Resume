@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 24px 16px 40px;
+  background: #e8ebe9;
+  min-height: 100vh;
+}
+
+.resume-wrap {
+  font-family: 'Lato', sans-serif;
+  background: #fff;
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 248px 1fr;
+  min-height: 1120px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.13);
+}
+
+.sidebar {
+  background: #0F6E56;
+  color: #fff;
+  padding: 36px 22px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.avatar-ring {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.sidebar-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.sidebar-title {
+  font-size: 10.5px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  margin-top: 5px;
+}
+
+.s-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.contact-list li {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.88);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.45;
+}
+
+.icon {
+  width: 17px;
+  height: 17px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.skill-name {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.9);
+  min-width: 90px;
+}
+
+.skill-bar-bg {
+  flex: 1;
+  height: 3.5px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 2px;
+}
+
+.soft-item {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 2px 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.soft-dot {
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.lang-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.lang-name {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.lang-level {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.14);
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.main {
+  background: #fff;
+  padding: 38px 34px 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.cv-download-btn {
+  position: absolute;
+  top: 34px;
+  right: 34px;
+  z-index: 2;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #0a2e26;
+  color: #c9a962;
+  box-shadow: 0 2px 8px rgba(10, 46, 38, 0.25);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.cv-download-btn:hover {
+  background: #124a3f;
+}
+
+.cv-download-btn:active {
+  transform: scale(0.98);
+}
+
+.cv-download-btn[disabled] {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.main-header-block {
+  border-bottom: 2.5px solid #0F6E56;
+  padding-bottom: 14px;
+  padding-right: 160px;
+}
+
+.main-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #0a2e26;
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+}
+
+.main-role {
+  font-size: 12px;
+  font-weight: 400;
+  color: #0F6E56;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.section-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #0F6E56;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #d0ede6;
+}
+
+.summary-text {
+  font-size: 13px;
+  color: #484848;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.summary-text strong {
+  font-weight: 700;
+  color: #0a2e26;
+}
+
+.exp-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.exp-role {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0a2e26;
+}
+
+.exp-date {
+  font-size: 10.5px;
+  color: #0F6E56;
+  background: #e1f5ee;
+  padding: 2px 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.exp-company {
+  font-size: 11.5px;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.exp-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.exp-bullets li {
+  font-size: 12px;
+  color: #484848;
+  line-height: 1.65;
+  padding-left: 14px;
+  position: relative;
+}
+
+.exp-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  background: #1D9E75;
+  border-radius: 50%;
+}
+
+.exp-bullets li strong {
+  color: #0a2e26;
+  font-weight: 700;
+}
+
+.exp-divider {
+  border: none;
+  border-top: 1px dashed #e0ede9;
+  margin: 6px 0;
+}
+
+.edu-degree {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0a2e26;
+}
+
+.edu-uni {
+  font-size: 12px;
+  color: #777;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.edu-meta {
+  font-size: 11px;
+  color: #0F6E56;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.proj-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.proj-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0a2e26;
+}
+
+.proj-tag {
+  font-size: 10.5px;
+  background: #e1f5ee;
+  color: #085041;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.proj-tech {
+  font-size: 11px;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 4px;
+  margin-top: 2px;
+}
+
+.notice-bar {
+  background: #f0faf6;
+  border-left: 3px solid #1D9E75;
+  padding: 10px 14px;
+  border-radius: 0 4px 4px 0;
+  font-size: 11.5px;
+  color: #085041;
+  line-height: 1.6;
+}
+
+.soft-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.learning-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.learning-chip {
+  font-size: 11.5px;
+  color: #085041;
+  background: #e1f5ee;
+  padding: 4px 13px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.coursework-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.course-card {
+  background: #f7fdfa;
+  border-left: 3px solid #1D9E75;
+  padding: 8px 11px;
+  border-radius: 0 4px 4px 0;
+}
+
+.course-card-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0a2e26;
+}
+
+.course-card-meta {
+  font-size: 11px;
+  color: #888;
+  margin-top: 1px;
+}
+
+body.pdf-capture .cv-download-btn {
+  visibility: hidden;
+}
+
+@media print {
+  body {
+    padding: 0;
+    background: #fff;
+  }
+
+  .cv-download-btn {
+    display: none !important;
+  }
+
+  .resume-wrap {
+    box-shadow: none;
+    max-width: none;
+    border-radius: 0;
+    break-inside: avoid;
+  }
+}
